@@ -49,7 +49,13 @@ img {
 body {
   background-color: var(--color-background);
   color: var(--color-text-primary);
-  font-family: "Roboto Condensed", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-family:
+    "Roboto Condensed",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Arial,
+    sans-serif;
 }
 
 /* Page wrapper */
@@ -340,7 +346,7 @@ body {
 .icon-btn {
   padding: 0.45rem 0.55rem;
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--color-primary);
   cursor: pointer;
