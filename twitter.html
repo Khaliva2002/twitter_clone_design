@@ -5,8 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>twitter</title>
     <link rel="icon" type="image/jpg" href="./assets/images/icon.jpg">
+    <link rel="stylesheet" href="./css/theme.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    
+    <!-- Page wrapper centers the feed column -->
+    <div class="page">
+        <!-- Main feed column -->
+        <main class="feed">
+            <!-- Top tabs -->
+            <div class="feed-tabs" role="tablist" aria-label="Timeline tabs">
+                <button class="feed-tab is-active" role="tab" aria-selected="true" type="button">
+                    <span class="feed-tab-label">For You</span>
+                </button>
+                <button class="feed-tab" role="tab" aria-selected="false" type="button">
+                    <span class="feed-tab-label">Following</span>
+                </button>
+            </div>
+
+            <!-- Composer for new post -->
+            <section class="composer" aria-label="Create new post">
+                <div class="composer-top">
+                    <div class="avatar" aria-hidden="true">A</div>
+                    <input class="composer-input" type="text" placeholder="What’s happening?" aria-label="What’s happening?">
+                </div>
+                <div class="composer-actions">
+                    <div class="composer-icons">
+                        <button class="icon-btn" type="button" aria-label="Add image">IMG</button>
+                        <button class="icon-btn" type="button" aria-label="Add GIF">GIF</button>
+                        <button class="icon-btn" type="button" aria-label="Add poll">POL</button>
+                        <button class="icon-btn" type="button" aria-label="Add emoji">EMO</button>
+                        <button class="icon-btn hide-sm" type="button" aria-label="Schedule">CAL</button>
+                        <button class="icon-btn hide-sm" type="button" aria-label="Add location">LOC</button>
+                    </div>
+                    <button class="post-btn" type="button">Post</button>
+                </div>
+            </section>
+
+            <!-- New posts pill -->
+            <button class="feed-pill" type="button">Show 70 posts</button>
+
+            <!-- Visible posts -->
+            <section class="posts" aria-label="Posts">
+                <!-- Post item -->
+                <article class="post">
+                    <div class="avatar" aria-hidden="true">E</div>
+                    <div class="post-body">
+                        <div class="post-header">
+                            <div class="post-meta">
+                                <strong class="post-name">Eyad</strong>
+                                <span class="post-handle">@EyadElalfy1 · 16h</span>
+                            </div>
+                            <button class="icon-btn" type="button" aria-label="Post options">...</button>
+                        </div>
+                        <p class="post-text">The college security is asking me about the ID card with the first-year girls.</p>
+                        <div class="post-media" aria-label="Post image">
+                            <span class="post-media-label">Post image</span>
+                            <span class="post-media-time">0:03</span>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action" type="button" aria-label="Reply"><span>Com</span><span>12</span></button>
+                            <button class="action" type="button" aria-label="Repost"><span>Rep</span><span>155</span></button>
+                            <button class="action" type="button" aria-label="Like"><span>Like</span><span>735</span></button>
+                            <button class="action" type="button" aria-label="Views"><span>View</span><span>29K</span></button>
+                            <button class="action" type="button" aria-label="Save">Sav</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post item -->
+                <article class="post">
+                    <div class="avatar avatar-alt" aria-hidden="true">B</div>
+                    <div class="post-body">
+                        <div class="post-header">
+                            <div class="post-meta">
+                                <strong class="post-name">ArabicBest</strong>
+                                <span class="post-handle">@ArabicBest · 15h</span>
+                            </div>
+                            <button class="icon-btn" type="button" aria-label="Post options">...</button>
+                        </div>
+                        <p class="post-text">Your excessive generosity becomes something people get used to until it becomes a right.</p>
+                        <div class="post-actions">
+                            <button class="action" type="button" aria-label="Reply"><span>Com</span><span>8</span></button>
+                            <button class="action" type="button" aria-label="Repost"><span>Rep</span><span>44</span></button>
+                            <button class="action" type="button" aria-label="Like"><span>Like</span><span>210</span></button>
+                            <button class="action" type="button" aria-label="Views"><span>View</span><span>11K</span></button>
+                            <button class="action" type="button" aria-label="Save">Sav</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <!-- Native tabs interaction without libraries -->
+    <script>
+        const tabs = document.querySelectorAll('.feed-tab');
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach((t) => {
+                    t.classList.remove('is-active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                tab.classList.add('is-active');
+                tab.setAttribute('aria-selected', 'true');
+            });
+        });
+    </script>
 </body>
 </html>
