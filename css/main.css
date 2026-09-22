@@ -70,6 +70,7 @@ body {
 
 /* Left sidebar */
 .sidebar {
+  z-index: 10;
   position: sticky;
   top: 0;
   height: 100vh;
