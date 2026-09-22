@@ -1,0 +1,52 @@
+@import url("./theme.css");
+
+/* Reset all default browser styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Main stylesheet */
+/* Theme variables are defined in theme.css and reused here */
+
+/* Example base using theme variables */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}

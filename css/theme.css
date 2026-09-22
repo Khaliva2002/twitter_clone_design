@@ -1,0 +1,36 @@
+/* Theme - Site color palette */
+
+:root {
+  /* Site background */
+  --color-background: #F7FAFC;
+
+  /* Card background */
+  --color-surface: #FFFFFF;
+
+  /* Primary color */
+  --color-primary: #4F8CFF;
+
+  /* Primary color on interaction (hover / active) */
+  --color-primary-hover: #356FE0;
+
+  /* Secondary / helper color */
+  --color-secondary: #63C7B2;
+
+  /* Primary text color */
+  --color-text-primary: #243447;
+
+  /* Secondary text color */
+  --color-text-secondary: #718096;
+
+  /* Border color */
+  --color-border: #E2E8F0;
+
+  /* Positive notification */
+  --color-success: #48BB78;
+
+  /* Warning */
+  --color-warning: #ECC94B;
+
+  /* Error */
+  --color-error: #E57373;
+}
