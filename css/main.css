@@ -487,6 +487,135 @@ body {
   background-color: var(--color-background);
 }
 
+/* Right sidebar */
+.rightbar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  width: 21rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem 1rem 1rem 1.5rem;
+}
+.rightbar::-webkit-scrollbar {
+  width: 1px;
+}
+
+.search-box {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  color: var(--color-text-secondary);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  background: none;
+}
+
+.search-input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.card-text {
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.subscribe-btn {
+  align-self: flex-start;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+}
+
+.subscribe-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+}
+
+.news-item:hover {
+  background-color: var(--color-background);
+}
+
+.news-title {
+  line-height: 1.4;
+}
+
+.news-meta {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.follow-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+}
+
+.follow-row:hover {
+  background-color: var(--color-background);
+}
+
+.follow-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color-surface);
+  background-color: var(--color-text-primary);
+}
+
+/* Hide right sidebar at 1003px and below */
+@media (max-width: 1003px) {
+  .rightbar {
+    display: none;
+  }
+}
+
 /* Responsive behavior */
 @media (max-width: 64rem) {
   .sidebar {

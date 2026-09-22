@@ -37,8 +37,9 @@
                 stroke-width="2"
               >
                 <path d="M3 11l9-8 9 8" />
-                <path d="M5 10v10h5v-6h4v6h5V10" /></svg
-            ></span>
+                <path d="M5 10v10h5v-6h4v6h5V10" />
+              </svg>
+            </span>
             <span class="nav-label">Home</span>
           </a>
           <a class="nav-item" href="#">
@@ -491,6 +492,115 @@
           </article>
         </section>
       </main>
+
+      <!-- Right sidebar -->
+      <aside class="rightbar" aria-label="Search and trends">
+        <!-- Search -->
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="M21 21l-4.3-4.3" /></svg
+          ></span>
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </div>
+
+        <!-- Premium card -->
+        <section class="card" aria-label="Subscribe to Premium">
+          <h2 class="card-title">Subscribe to Premium</h2>
+          <p class="card-text">
+            Get rid of ads, see your analytics, boost your replies and unlock
+            20+ features.
+          </p>
+          <button class="subscribe-btn" type="button">Subscribe</button>
+        </section>
+
+        <!-- Todays News card -->
+        <section class="card" aria-label="Today's News">
+          <div class="card-header">
+            <h2 class="card-title">Today's News</h2>
+            <button class="icon-btn" type="button" aria-label="Dismiss">
+              X
+            </button>
+          </div>
+          <a class="news-item" href="#">
+            <strong class="news-title"
+              >Pastor Questions Using Wedding Jotters for Church Notes</strong
+            >
+            <span class="news-meta">3 hours ago · Other · 179 posts</span>
+          </a>
+          <a class="news-item" href="#">
+            <strong class="news-title"
+              >Vibe Coding Lets Builders Create Software with Casual AI
+              Prompts</strong
+            >
+            <span class="news-meta">2 hours ago · Other · 107 posts</span>
+          </a>
+          <a class="news-item" href="#">
+            <strong class="news-title"
+              >Kalshi Seeks CFTC Approval for Margin Trading on Prediction
+              Markets</strong
+            >
+            <span class="news-meta">3 hours ago · News · 189 posts</span>
+          </a>
+        </section>
+
+        <!-- Whats happening card -->
+        <section class="card" aria-label="What's happening">
+          <h2 class="card-title">What's happening</h2>
+          <a class="news-item" href="#">
+            <span class="news-meta">Trending in Egypt</span>
+            <strong class="news-title">Trending Topic One</strong>
+            <span class="news-meta">12K posts</span>
+          </a>
+          <a class="news-item" href="#">
+            <span class="news-meta">Trending in Egypt</span>
+            <strong class="news-title">Trending Topic Two</strong>
+            <span class="news-meta">8K posts</span>
+          </a>
+        </section>
+
+        <!-- Who to follow card -->
+        <section class="card" aria-label="Who to follow">
+          <h2 class="card-title">Who to follow</h2>
+          <div class="follow-row">
+            <span class="avatar" aria-hidden="true">T</span>
+            <span class="user-info">
+              <strong class="user-name">Tech Daily</strong>
+              <span class="user-handle">@techdaily</span>
+            </span>
+            <button class="follow-btn" type="button">Follow</button>
+          </div>
+          <div class="follow-row">
+            <span class="avatar avatar-alt" aria-hidden="true">D</span>
+            <span class="user-info">
+              <strong class="user-name">Design Hub</strong>
+              <span class="user-handle">@designhub</span>
+            </span>
+            <button class="follow-btn" type="button">Follow</button>
+          </div>
+          <div class="follow-row">
+            <span class="avatar" aria-hidden="true">N</span>
+            <span class="user-info">
+              <strong class="user-name">News Live</strong>
+              <span class="user-handle">@newslive</span>
+            </span>
+            <button class="follow-btn" type="button">Follow</button>
+          </div>
+        </section>
+      </aside>
     </div>
 
     <script src="./js/main.js"></script>
