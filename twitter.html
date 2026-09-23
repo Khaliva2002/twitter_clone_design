@@ -26,7 +26,7 @@
         <a class="logo" href="#" aria-label="Home">X</a>
 
         <nav class="nav">
-          <a class="nav-item is-active" href="#">
+          <a class="nav-item is-active" href="#" data-view="home">
             <span class="nav-icon" aria-hidden="true"
               ><svg
                 viewBox="0 0 24 24"
@@ -42,7 +42,7 @@
             </span>
             <span class="nav-label">Home</span>
           </a>
-          <a class="nav-item" href="#">
+          <a class="nav-item" href="#" data-view="explore">
             <span class="nav-icon" aria-hidden="true"
               ><svg
                 viewBox="0 0 24 24"
@@ -331,166 +331,508 @@
 
       <!-- Main feed column -->
       <main class="feed">
-        <!-- Top tabs -->
-        <div class="feed-tabs" role="tablist" aria-label="Timeline tabs">
-          <button
-            class="feed-tab is-active"
-            role="tab"
-            aria-selected="true"
-            type="button"
-          >
-            <span class="feed-tab-label">For You</span>
-          </button>
-          <button
-            class="feed-tab"
-            role="tab"
-            aria-selected="false"
-            type="button"
-          >
-            <span class="feed-tab-label">Following</span>
-          </button>
-        </div>
+        <!-- Home view -->
+        <div id="homeView">
+          <!-- Top tabs -->
+          <div class="feed-tabs" role="tablist" aria-label="Timeline tabs">
+            <button
+              class="feed-tab is-active"
+              role="tab"
+              aria-selected="true"
+              type="button"
+            >
+              <span class="feed-tab-label">For You</span>
+            </button>
+            <button
+              class="feed-tab"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              <span class="feed-tab-label">Following</span>
+            </button>
+          </div>
 
-        <!-- Composer for new post -->
-        <section class="composer" aria-label="Create new post">
-          <div class="composer-top">
-            <div class="avatar" aria-hidden="true">
-              <img
-                src="./assets/images/profiles/khliva.jpg"
-                alt="Khaliva user image"
+          <!-- Composer for new post -->
+          <section class="composer" aria-label="Create new post">
+            <div class="composer-top">
+              <div class="avatar" aria-hidden="true">
+                <img
+                  src="./assets/images/profiles/khliva.jpg"
+                  alt="Khaliva user image"
+                />
+              </div>
+              <input
+                class="composer-input"
+                type="text"
+                placeholder="What’s happening?"
+                aria-label="What’s happening?"
               />
             </div>
-            <input
-              class="composer-input"
-              type="text"
-              placeholder="What’s happening?"
-              aria-label="What’s happening?"
-            />
-          </div>
-          <div class="composer-actions">
-            <div class="composer-icons">
-              <button class="icon-btn" type="button" aria-label="Add image">
-                <i class="fa-regular fa-image"></i>
-              </button>
-              <button class="icon-btn" type="button" aria-label="Add GIF">
-                <i class="fa-solid fa-image"></i>
-              </button>
-              <button class="icon-btn" type="button" aria-label="Add poll">
-                <i class="fa-solid fa-square-poll-vertical"></i>
-              </button>
-              <button class="icon-btn" type="button" aria-label="Add emoji">
-                <i class="fa-solid fa-face-laugh"></i>
-              </button>
-              <button
-                class="icon-btn hide-sm"
-                type="button"
-                aria-label="Schedule"
-              >
-                <i class="fa-regular fa-calendar"></i>
-              </button>
-              <button
-                class="icon-btn hide-sm"
-                type="button"
-                aria-label="Add location"
-              >
-                <i class="fa-solid fa-map-location"></i>
-              </button>
-            </div>
-            <button class="post-btn" type="button">Post</button>
-          </div>
-        </section>
-
-        <!-- New posts pill -->
-        <button class="feed-pill" type="button">Show 70 posts</button>
-
-        <!-- Visible posts -->
-        <section class="posts" aria-label="Posts">
-          <!-- Post item -->
-          <article class="post">
-            <div class="avatar" aria-hidden="true">E</div>
-            <div class="post-body">
-              <div class="post-header">
-                <div class="post-meta">
-                  <strong class="post-name">Eyad</strong>
-                  <span class="post-handle">@EyadElalfy1 · 16h</span>
-                </div>
+            <div class="composer-actions">
+              <div class="composer-icons">
+                <button class="icon-btn" type="button" aria-label="Add image">
+                  <i class="fa-regular fa-image"></i>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Add GIF">
+                  <i class="fa-solid fa-image"></i>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Add poll">
+                  <i class="fa-solid fa-square-poll-vertical"></i>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Add emoji">
+                  <i class="fa-solid fa-face-laugh"></i>
+                </button>
                 <button
-                  class="icon-btn"
+                  class="icon-btn hide-sm"
                   type="button"
-                  aria-label="Post options"
+                  aria-label="Schedule"
                 >
-                  ...
+                  <i class="fa-regular fa-calendar"></i>
                 </button>
-              </div>
-              <p class="post-text">
-                The college security is asking me about the ID card with the
-                first-year girls.
-              </p>
-              <div class="post-media" aria-label="Post image">
-                <span class="post-media-label">Post image</span>
-                <span class="post-media-time">0:03</span>
-              </div>
-              <div class="post-actions">
-                <button class="action" type="button" aria-label="Reply">
-                  <span>Com</span><span>12</span>
-                </button>
-                <button class="action" type="button" aria-label="Repost">
-                  <span>Rep</span><span>155</span>
-                </button>
-                <button class="action" type="button" aria-label="Like">
-                  <span>Like</span><span>735</span>
-                </button>
-                <button class="action" type="button" aria-label="Views">
-                  <span>View</span><span>29K</span>
-                </button>
-                <button class="action" type="button" aria-label="Save">
-                  Sav
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Post item -->
-          <article class="post">
-            <div class="avatar avatar-alt" aria-hidden="true">B</div>
-            <div class="post-body">
-              <div class="post-header">
-                <div class="post-meta">
-                  <strong class="post-name">ArabicBest</strong>
-                  <span class="post-handle">@ArabicBest · 15h</span>
-                </div>
                 <button
-                  class="icon-btn"
+                  class="icon-btn hide-sm"
                   type="button"
-                  aria-label="Post options"
+                  aria-label="Add location"
                 >
-                  ...
+                  <i class="fa-solid fa-map-location"></i>
                 </button>
               </div>
-              <p class="post-text">
-                Your excessive generosity becomes something people get used to
-                until it becomes a right.
-              </p>
-              <div class="post-actions">
-                <button class="action" type="button" aria-label="Reply">
-                  <span>Com</span><span>8</span>
-                </button>
-                <button class="action" type="button" aria-label="Repost">
-                  <span>Rep</span><span>44</span>
-                </button>
-                <button class="action" type="button" aria-label="Like">
-                  <span>Like</span><span>210</span>
-                </button>
-                <button class="action" type="button" aria-label="Views">
-                  <span>View</span><span>11K</span>
-                </button>
-                <button class="action" type="button" aria-label="Save">
-                  Sav
-                </button>
-              </div>
+              <button class="post-btn" type="button">Post</button>
             </div>
-          </article>
-        </section>
+          </section>
+
+          <!-- New posts pill -->
+          <button class="feed-pill" type="button">Show 70 posts</button>
+
+          <!-- Visible posts -->
+          <section class="posts" aria-label="Posts">
+            <!-- Post item -->
+            <article class="post">
+              <div class="avatar" aria-hidden="true">E</div>
+              <div class="post-body">
+                <div class="post-header">
+                  <div class="post-meta">
+                    <strong class="post-name">Eyad</strong>
+                    <span class="post-handle">@EyadElalfy1 · 16h</span>
+                  </div>
+                  <button
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Post options"
+                  >
+                    ...
+                  </button>
+                </div>
+                <p class="post-text">
+                  The college security is asking me about the ID card with the
+                  first-year girls.
+                </p>
+                <div class="post-media" aria-label="Post image">
+                  <span class="post-media-label">Post image</span>
+                  <span class="post-media-time">0:03</span>
+                </div>
+                <div class="post-actions">
+                  <button class="action" type="button" aria-label="Reply">
+                    <i class="fa-regular fa-comment"></i><span>12</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Repost">
+                    <i class="fa-regular fa-message"></i><span>155</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Like">
+                    <i class="fa-regular fa-thumbs-up"></i><span>735</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Views">
+                    <i class="fa-regular fa-eye"></i><span>29K</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Save">
+                    <i class="fa-solid fa-share-from-square"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Post item -->
+            <article class="post">
+              <div class="avatar avatar-alt" aria-hidden="true">B</div>
+              <div class="post-body">
+                <div class="post-header">
+                  <div class="post-meta">
+                    <strong class="post-name">ArabicBest</strong>
+                    <span class="post-handle">@ArabicBest · 15h</span>
+                  </div>
+                  <button
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Post options"
+                  >
+                    ...
+                  </button>
+                </div>
+                <p class="post-text">
+                  Your excessive generosity becomes something people get used to
+                  until it becomes a right.
+                </p>
+                <div class="post-actions">
+                  <button class="action" type="button" aria-label="Reply">
+                    <i class="fa-regular fa-comment"></i><span>8</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Repost">
+                    <i class="fa-regular fa-message"></i><span>44</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Like">
+                    <i class="fa-regular fa-thumbs-up"></i><span>210</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Views">
+                    <i class="fa-regular fa-eye"></i><span>11K</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Save">
+                    <i class="fa-solid fa-share-from-square"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <!-- Explore view -->
+        <div id="exploreView" hidden>
+          <!-- Explore search row -->
+          <div class="explore-top">
+            <div class="search-box explore-search">
+              <span class="search-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="M21 21l-4.3-4.3" /></svg
+              ></span>
+              <input
+                class="search-input"
+                type="search"
+                placeholder="Search"
+                aria-label="Search Explore"
+              />
+            </div>
+            <button
+              class="icon-btn"
+              type="button"
+              aria-label="Explore settings"
+            >
+              <i class="fa-solid fa-gear"></i>
+            </button>
+          </div>
+
+          <!-- Explore tabs -->
+          <div class="explore-tabs" role="tablist" aria-label="Explore tabs">
+            <button
+              class="feed-tab is-active"
+              role="tab"
+              aria-selected="true"
+              type="button"
+            >
+              <span class="feed-tab-label">Explore</span>
+            </button>
+            <button
+              class="feed-tab"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              <span class="feed-tab-label">Trending</span>
+            </button>
+            <button
+              class="feed-tab"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              <span class="feed-tab-label">News</span>
+            </button>
+            <button
+              class="feed-tab"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              <span class="feed-tab-label">Sports</span>
+            </button>
+            <button
+              class="feed-tab"
+              role="tab"
+              aria-selected="false"
+              type="button"
+            >
+              <span class="feed-tab-label">Entertainment</span>
+            </button>
+          </div>
+
+          <!-- Todays news section -->
+          <section class="explore-section" aria-label="Today's News">
+            <h2 class="explore-heading">Today's News</h2>
+            <a class="explore-news" href="#">
+              <strong class="news-title"
+                >Senne Lammens Tops Premier League Saves as Fans Compare to De
+                Gea</strong
+              >
+              <span class="news-meta">Trending now · Sports · 226 posts</span>
+            </a>
+            <a class="explore-news" href="#">
+              <strong class="news-title"
+                >Clubgoers Move G-Wagons for Burna Boy's Ferrari in
+                Lagos</strong
+              >
+              <span class="news-meta"
+                >Trending now · Entertainment · 55 posts</span
+              >
+            </a>
+            <a class="explore-news" href="#">
+              <strong class="news-title"
+                >Oasis Adds Extra Dates to Live '27 Tour Amid High
+                Demand</strong
+              >
+              <span class="news-meta">Trending now · Other · 873 posts</span>
+            </a>
+          </section>
+
+          <!-- Trending list -->
+          <section class="explore-section" aria-label="Trending in Egypt">
+            <a class="trending-row" href="#">
+              <span class="news-meta">Trending in Egypt</span>
+              <span class="trending-title">أحمد السقا</span>
+            </a>
+            <a class="trending-row" href="#">
+              <span class="news-meta">Trending in Egypt</span>
+              <span class="trending-title">عنتر و عبله</span>
+            </a>
+            <a class="trending-row" href="#">
+              <span class="news-meta">Trending in Egypt</span>
+              <span class="trending-title">الدكتوره سندس</span>
+            </a>
+            <a class="trending-row" href="#">
+              <span class="news-meta">Trending in KSA</span>
+              <span class="trending-title">الحرب الإيرانيه</span>
+            </a>
+            <a class="trending-row" href="#">
+              <span class="news-meta">Trending in Egypt</span>
+              <span class="trending-title">طرد كهربا</span>
+            </a>
+          </section>
+
+          <!-- Who to follow -->
+          <section class="explore-section" aria-label="Who to follow">
+            <h2 class="explore-heading">Who to follow</h2>
+            <div class="follow-row">
+              <span class="avatar" aria-hidden="true">I</span>
+              <span class="user-info">
+                <strong class="user-name">Ibrahim Fayek</strong>
+                <span class="user-handle">@IbrahimFayek</span>
+              </span>
+              <button class="follow-btn" type="button">Follow</button>
+            </div>
+            <div class="follow-row">
+              <span class="avatar avatar-alt" aria-hidden="true">C</span>
+              <span class="user-info">
+                <strong class="user-name">Cristiano Ronaldo</strong>
+                <span class="user-handle">@Cristiano</span>
+              </span>
+              <button class="follow-btn" type="button">Follow</button>
+            </div>
+            <div class="follow-row">
+              <span class="avatar" aria-hidden="true">A</span>
+              <span class="user-info">
+                <strong class="user-name">Abdullah Elshrif</strong>
+                <span class="user-handle">@AbdullahElshrif</span>
+              </span>
+              <button class="follow-btn" type="button">Follow</button>
+            </div>
+            <a class="show-more" href="#">Show more</a>
+          </section>
+
+          <!-- Posts for you -->
+          <section class="explore-section" aria-label="Posts for you">
+            <h2 class="explore-heading">Posts for you</h2>
+            <!-- Explore post item -->
+            <article class="post">
+              <div class="avatar" aria-hidden="true">S</div>
+              <div class="post-body">
+                <div class="post-header">
+                  <div class="post-meta">
+                    <strong class="post-name">Sports Hub</strong>
+                    <span class="post-handle">@sportshub · 2h</span>
+                  </div>
+                  <button
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Post options"
+                  >
+                    ...
+                  </button>
+                </div>
+                <p class="post-text">
+                  Big win tonight, fans are comparing the saves to De Gea at his
+                  peak.
+                </p>
+                <div class="post-actions">
+                  <button class="action" type="button" aria-label="Reply">
+                    <i class="fa-regular fa-comment"></i><span>21</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Repost">
+                    <i class="fa-regular fa-message"></i><span>89</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Like">
+                    <i class="fa-regular fa-thumbs-up"></i><span>412</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Views">
+                    <i class="fa-regular fa-eye"></i><span>18K</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Save">
+                    <i class="fa-solid fa-share-from-square"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Explore post item -->
+            <article class="post">
+              <div class="avatar avatar-alt" aria-hidden="true">
+                <img src="./assets/images/profiles/user1.jpg" alt="" />
+              </div>
+              <div class="post-body">
+                <div class="post-header">
+                  <div class="post-meta">
+                    <strong class="post-name">Music Daily</strong>
+                    <span class="post-handle">@musicdaily · 5h</span>
+                  </div>
+                  <button
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Post options"
+                  >
+                    ...
+                  </button>
+                </div>
+                <p class="post-text">
+                  New tour dates just dropped after crazy demand from fans.
+                </p>
+                <div class="post-actions">
+                  <button class="action" type="button" aria-label="Reply">
+                    <i class="fa-regular fa-comment"></i><span>14</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Repost">
+                    <i class="fa-regular fa-message"></i><span>67</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Like">
+                    <i class="fa-regular fa-thumbs-up"></i><span>298</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Views">
+                    <i class="fa-regular fa-eye"></i><span>9K</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Save">
+                    <i class="fa-solid fa-share-from-square"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Netflix ad post with image -->
+            <article class="post">
+              <div class="avatar" aria-hidden="true">
+                <img
+                  src="./assets/images//posts/netflex.jpg"
+                  alt="netflix photo"
+                />
+              </div>
+              <div class="post-body">
+                <div class="post-header">
+                  <div class="post-meta">
+                    <strong class="post-name">Netflix</strong>
+                    <span class="post-handle">@netflix · Ad</span>
+                  </div>
+                  <button
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Post options"
+                  >
+                    ...
+                  </button>
+                </div>
+                <p class="post-text">
+                  New season is now streaming. Grab your popcorn and watch it
+                  tonight.
+                </p>
+                <div class="post-media" aria-label="Netflix ad image">
+                  <img
+                    src="./assets/images/posts/netflex.jpg"
+                    alt="Netflix new season poster"
+                  />
+                </div>
+                <div class="post-actions">
+                  <button class="action" type="button" aria-label="Reply">
+                    <i class="fa-regular fa-comment"></i><span>45</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Repost">
+                    <i class="fa-regular fa-message"></i><span>120</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Like">
+                    <i class="fa-regular fa-thumbs-up"></i><span>980</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Views">
+                    <i class="fa-regular fa-eye"></i><span>55K</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Save">
+                    <i class="fa-solid fa-share-from-square"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Memes text post -->
+            <article class="post">
+              <div class="avatar avatar-alt" aria-hidden="true">M</div>
+              <div class="post-body">
+                <div class="post-header">
+                  <div class="post-meta">
+                    <strong class="post-name">Memes Daily</strong>
+                    <span class="post-handle">@memesdaily · 1h</span>
+                  </div>
+                  <button
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Post options"
+                  >
+                    ...
+                  </button>
+                </div>
+                <p class="post-text">
+                  Me: I will sleep early tonight. Also me at 3AM watching memes.
+                </p>
+                <div class="post-media" aria-label="Memes image">
+                  <img src="./assets/images/posts/mem.jpg" alt="Funny meme" />
+                </div>
+                <div class="post-actions">
+                  <button class="action" type="button" aria-label="Reply">
+                    <i class="fa-regular fa-comment"></i><span>67</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Repost">
+                    <i class="fa-regular fa-message"></i><span>310</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Like">
+                    <i class="fa-regular fa-thumbs-up"></i><span>1.2K</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Views">
+                    <i class="fa-regular fa-eye"></i><span>42K</span>
+                  </button>
+                  <button class="action" type="button" aria-label="Save">
+                    <i class="fa-solid fa-share-from-square"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
       </main>
 
       <!-- Right sidebar -->

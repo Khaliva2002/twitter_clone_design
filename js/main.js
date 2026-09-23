@@ -1,15 +1,46 @@
-// Main script for feed tabs and sidebar popup
+// Main script for views, tabs and sidebar popup
 
-// Feed tabs switching
-const tabs = document.querySelectorAll(".feed-tab");
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    tabs.forEach((t) => {
-      t.classList.remove("is-active");
-      t.setAttribute("aria-selected", "false");
+// Tab switching scoped per tablist container
+function setupTabs(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
+  const tabs = container.querySelectorAll(".feed-tab");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => {
+        t.classList.remove("is-active");
+        t.setAttribute("aria-selected", "false");
+      });
+      tab.classList.add("is-active");
+      tab.setAttribute("aria-selected", "true");
     });
-    tab.classList.add("is-active");
-    tab.setAttribute("aria-selected", "true");
+  });
+}
+
+setupTabs(".feed-tabs");
+setupTabs(".explore-tabs");
+
+// Home / Explore view switching
+const viewLinks = document.querySelectorAll("[data-view]");
+const homeView = document.getElementById("homeView");
+const exploreView = document.getElementById("exploreView");
+
+function showView(viewName) {
+  if (!homeView || !exploreView) return;
+  const isExplore = viewName === "explore";
+  homeView.hidden = isExplore;
+  exploreView.hidden = !isExplore;
+  viewLinks.forEach((link) => {
+    const active = link.getAttribute("data-view") === viewName;
+    link.classList.toggle("is-active", active);
+  });
+  document.title = isExplore ? "Explore / X" : "Home / X";
+}
+
+viewLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    showView(link.getAttribute("data-view"));
   });
 });
 
