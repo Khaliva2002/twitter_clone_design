@@ -1,0 +1,364 @@
+@import url("./theme.css");
+
+/* Premium page styles */
+/* All code and comments are in English */
+
+/* Page base */
+.premium-page {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  padding-bottom: 12rem;
+}
+
+/* Close button */
+.premium-close {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  z-index: 40;
+}
+
+.premium-close:hover {
+  background-color: var(--color-border);
+}
+
+/* Center container */
+.premium-container {
+  width: 100%;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 3.5rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Hero badge */
+.premium-badge {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+}
+
+/* Hero title */
+.premium-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.premium-title .highlight {
+  color: var(--color-primary);
+}
+
+/* Billing toggle */
+.billing-toggle {
+  display: flex;
+  width: min(100%, 22rem);
+  padding: 0.3rem;
+  border-radius: 999px;
+  background-color: var(--color-border);
+}
+
+.billing-btn {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+}
+
+.billing-btn.is-active {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  box-shadow: 0 0.15rem 0.6rem rgba(36, 52, 71, 0.18);
+}
+
+/* Plan cards */
+.plan-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.plan-card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+}
+
+.plan-card.is-selected {
+  border-color: var(--color-primary);
+}
+
+.plan-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.plan-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.plan-off {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.plan-price {
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  font-weight: 800;
+}
+
+.plan-per {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.plan-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 600;
+}
+
+.plan-feature i {
+  width: 1.4rem;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.badge-new {
+  padding: 0.1rem 0.45rem;
+  border-radius: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--color-surface);
+  background-color: var(--color-text-primary);
+}
+
+.info-icon {
+  margin-left: auto;
+  color: var(--color-text-secondary);
+}
+
+/* Compare section */
+.compare-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.compare-title {
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  font-weight: 800;
+}
+
+.compare-wrap {
+  overflow-x: auto;
+  border-radius: 1.25rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.compare-table th:first-child,
+.compare-table td:first-child {
+  text-align: left;
+}
+
+.compare-table thead th {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.compare-check {
+  color: var(--color-success);
+  font-weight: 800;
+}
+
+.compare-cross {
+  color: var(--color-text-secondary);
+}
+
+/* Bottom sticky plan bar */
+.plan-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  background-color: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--color-border);
+}
+
+.plan-bar-inner {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.plan-bar-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.plan-bar-price {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.plan-bar-note {
+  margin-top: 0.4rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.plan-bar-action {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pay-btn {
+  padding: 0.9rem;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+}
+
+.pay-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.plan-terms {
+  padding: 0.9rem 1rem;
+  border-radius: 0.9rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.plan-terms a {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+}
+
+/* Responsive behavior */
+@media (max-width: 48rem) {
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-bar-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 40rem) {
+  /* Hide bottom plan bar on mobile */
+  .plan-bar {
+    display: none;
+  }
+
+  .premium-page {
+    padding-bottom: 2rem;
+  }
+
+  .premium-container {
+    padding-top: 4.5rem;
+  }
+
+  /* Fit compare tables without horizontal scroll */
+  .compare-wrap {
+    overflow-x: visible;
+  }
+
+  .compare-table {
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .compare-table thead th {
+    font-size: 0.9rem;
+  }
+
+  .compare-table th:first-child,
+  .compare-table td:first-child {
+    width: 42%;
+  }
+}

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium / X</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-7.3.1-web/fontawesome-free-7.3.1-web/css/all.min.css"
+    />
+    <link rel="icon" type="image/jpg" href="./assets/images/icon.jpg" />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/premium.css" />
+  </head>
+  <body>
+    <!-- Premium page wrapper -->
+    <div class="premium-page">
+      <!-- Close button back to home -->
+      <a class="premium-close" href="./twitter.html" aria-label="Close">X</a>
+
+      <!-- Center content -->
+      <div class="premium-container">
+        <!-- Hero badge -->
+        <div class="premium-badge" aria-hidden="true">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <!-- Hero title -->
+        <h1 class="premium-title">
+          Don't lose <span class="highlight">50% off</span> your first 2 months
+        </h1>
+
+        <!-- Billing toggle -->
+        <div class="billing-toggle" role="tablist" aria-label="Billing period">
+          <button
+            class="billing-btn is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-billing="monthly"
+          >
+            Monthly
+          </button>
+          <button
+            class="billing-btn"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-billing="annual"
+          >
+            Annual
+          </button>
+        </div>
+
+        <!-- Plan cards -->
+        <div class="plan-grid">
+          <!-- Premium plan -->
+          <button
+            class="plan-card is-selected"
+            type="button"
+            data-plan="premium"
+            aria-pressed="true"
+          >
+            <span class="plan-top">
+              <span class="plan-name">Premium</span>
+              <span class="plan-off">50% off for 2 months</span>
+            </span>
+            <span class="plan-price">
+              <span class="plan-amount" data-monthly="EGP 122.50" data-annual="EGP 102.50">EGP 122.50</span>
+              <span class="plan-per">/ month</span>
+            </span>
+            <span class="plan-list">
+              <span class="plan-feature"><i class="fa-solid fa-circle-check"></i>Verified checkmark</span>
+              <span class="plan-feature"><i class="fa-solid fa-x"></i>Enhanced Grok access</span>
+              <span class="plan-feature"><i class="fa-solid fa-chart-line"></i>Advanced analytics <span class="info-icon">i</span></span>
+              <span class="plan-feature"><i class="fa-solid fa-star"></i>Less ads in your feeds</span>
+              <span class="plan-feature"><i class="fa-regular fa-comment"></i>Boosted replies <span class="info-icon">i</span></span>
+              <span class="plan-feature"><i class="fa-regular fa-newspaper"></i>Write Articles</span>
+              <span class="plan-feature"><i class="fa-solid fa-money-bill"></i>Get paid to post</span>
+              <span class="plan-feature"><i class="fa-solid fa-plus"></i>Everything in Basic</span>
+            </span>
+          </button>
+
+          <!-- Premium Plus plan -->
+          <button
+            class="plan-card"
+            type="button"
+            data-plan="plus"
+            aria-pressed="false"
+          >
+            <span class="plan-top">
+              <span class="plan-name">Premium+</span>
+              <span class="plan-off">50% off for 2 months</span>
+            </span>
+            <span class="plan-price">
+              <span class="plan-amount" data-monthly="EGP 1,012.50" data-annual="EGP 844.50">EGP 1,012.50</span>
+              <span class="plan-per">/ month</span>
+            </span>
+            <span class="plan-list">
+              <span class="plan-feature"><i class="fa-solid fa-wand-magic-sparkles"></i>Fully ad-free</span>
+              <span class="plan-feature"><i class="fa-solid fa-x"></i>SuperGrok <span class="badge-new">NEW</span> <span class="info-icon">i</span></span>
+              <span class="plan-feature"><i class="fa-solid fa-at"></i>Handle Marketplace <span class="badge-new">NEW</span> <span class="info-icon">i</span></span>
+              <span class="plan-feature"><i class="fa-regular fa-comment"></i>Highest reply boost <span class="info-icon">i</span></span>
+              <span class="plan-feature"><i class="fa-solid fa-crosshairs"></i>Radar Advanced Search <span class="info-icon">i</span></span>
+              <span class="plan-feature"><i class="fa-solid fa-briefcase"></i>X Pro <span class="info-icon">i</span></span>
+              <span class="plan-feature"><i class="fa-solid fa-plus"></i>Everything in Premium</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Compare tiers section -->
+        <section class="compare-section" aria-label="Compare tiers and features">
+          <h2 class="compare-title">Compare tiers &amp; features</h2>
+          <div class="compare-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Enhanced Experience</th>
+                  <th>Premium</th>
+                  <th>Premium+</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ads</td>
+                  <td>Half in For You &amp; Following</td>
+                  <td>Fully ad-free</td>
+                </tr>
+                <tr>
+                  <td>Reply boost</td>
+                  <td>Larger</td>
+                  <td>Largest</td>
+                </tr>
+                <tr>
+                  <td>Radar</td>
+                  <td><span class="compare-cross">X</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Edit post</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Longer posts</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Background video playback</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Download videos</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Grok AI comparison -->
+        <section class="compare-section" aria-label="Grok AI comparison">
+          <div class="compare-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Grok AI</th>
+                  <th>Premium</th>
+                  <th>Premium+</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Usage limits</td>
+                  <td>Higher</td>
+                  <td>Highest</td>
+                </tr>
+                <tr>
+                  <td>SuperGrok</td>
+                  <td><span class="compare-cross">X</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Early access to new features</td>
+                  <td><span class="compare-cross">X</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Tag @Grok in replies</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Creator Hub comparison -->
+        <section class="compare-section" aria-label="Creator Hub comparison">
+          <div class="compare-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Creator Hub</th>
+                  <th>Premium</th>
+                  <th>Premium+</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Write Articles</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Get paid to post</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Creator Subscriptions</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>X Pro</td>
+                  <td><span class="compare-cross">X</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Media Studio</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Analytics</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Verification and Security comparison -->
+        <section class="compare-section" aria-label="Verification and Security comparison">
+          <div class="compare-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Verification &amp; Security</th>
+                  <th>Premium</th>
+                  <th>Premium+</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Checkmark</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Optional ID verification</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Customization comparison -->
+        <section class="compare-section" aria-label="Customization comparison">
+          <div class="compare-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Customization</th>
+                  <th>Premium</th>
+                  <th>Premium+</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>X Handle Marketplace</td>
+                  <td><span class="compare-cross">X</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Highlights tab</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Bookmark folders</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>App icons</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Customize navigation</td>
+                  <td><span class="compare-check">✓</span></td>
+                  <td><span class="compare-check">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- Bottom sticky plan bar -->
+      <div class="plan-bar" aria-label="Selected plan summary">
+        <div class="plan-bar-inner">
+          <div>
+            <div class="plan-bar-name" id="planBarName">Premium</div>
+            <div class="plan-bar-price">
+              <span id="planBarPrice">EGP 122.50</span>
+              <span class="plan-per">/ month</span>
+            </div>
+            <p class="plan-bar-note" id="planBarNote">
+              For first 2 months, then EGP 244.99 billed monthly
+            </p>
+          </div>
+          <div class="plan-bar-action">
+            <button class="pay-btn" type="button">Subscribe &amp; Pay</button>
+            <p class="plan-terms">
+              By subscribing, you agree to our <a href="#">Purchaser Terms</a>,
+              and that subscriptions auto-renew until you cancel.
+              <a href="#">Cancel anytime</a>, at least 24 hours prior to renewal
+              to avoid additional charges. Price subject to change.
+              <em>Manage your subscription through the platform you subscribed on.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/premium.js"></script>
+  </body>
+</html>
